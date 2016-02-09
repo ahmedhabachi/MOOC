@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="MOOC">
-	<jta-data-source>java:/MOOC</jta-data-source>
 		<class>entities.Account</class>
+		<class>entities.Administrator</class>
+		<class>entities.Assignment</class>
+		<class>entities.Catalogue</class>
+		<class>entities.Categorie</class>
+		<class>entities.Certificate</class>
+		<class>entities.Comment</class>
+		<class>entities.Conference</class>
+		<class>entities.Discussion</class>
+		<class>entities.LearningMaterial</class>
+		<class>entities.Partner</class>
+		<class>entities.Rating</class>
+		<class>entities.Session</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.show_sql" value="true"/>

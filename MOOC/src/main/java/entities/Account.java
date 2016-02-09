@@ -7,7 +7,8 @@ import java.lang.String;
 //import javax.persistence.*;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 
 
 /**
@@ -18,8 +19,9 @@ import javax.persistence.Id;
 
 public class Account implements Serializable {
 
-	   
+	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String firstName;
 	private String lastName;
@@ -30,6 +32,7 @@ public class Account implements Serializable {
 	private String login;
 	private String password;
 	private String mail;
+	private String type;
 	private static final long serialVersionUID = 1L;
 
 	public Account() {
@@ -105,5 +108,11 @@ public class Account implements Serializable {
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-   
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+    
 }
