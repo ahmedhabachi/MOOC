@@ -20,7 +20,6 @@ public class Categorie implements Serializable {
 	private String name;
 	private String picture;
 	private static final long serialVersionUID = 1L;
-
 	public Categorie() {
 		super();
 	}   
