@@ -48,7 +48,7 @@ public class Catalogue implements Serializable {
 	public void setPicture(String picture) {
 		this.picture = picture;
 	}
-	@OneToMany
+	@OneToMany(mappedBy="catalogue")
 	public List<Categorie> getCategories() {
 		return categories;
 	}
