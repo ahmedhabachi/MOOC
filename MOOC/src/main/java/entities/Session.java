@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 
@@ -32,6 +33,7 @@ public class Session implements Serializable {
 	private String requirement;
 	private String videos;
 	private String name;
+	private LearningMaterial material;
 	private static final long serialVersionUID = 1L;
 	public Session() {
 		super();
@@ -105,6 +107,13 @@ public class Session implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	@OneToMany
+	public LearningMaterial getMaterial() {
+		return material;
+	}
+	public void setMaterial(LearningMaterial material) {
+		this.material = material;
 	}
 
    

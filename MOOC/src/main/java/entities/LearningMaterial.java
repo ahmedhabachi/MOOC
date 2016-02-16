@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -21,7 +23,7 @@ public class LearningMaterial implements Serializable {
 	private String type;
 	private Double price;
 	private static final long serialVersionUID = 1L;
-
+    private List<Session> sessions ;
 	public LearningMaterial() {
 		super();
 	}   
@@ -45,6 +47,13 @@ public class LearningMaterial implements Serializable {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	@OneToMany
+	public List<Session> getSessions() {
+		return sessions;
+	}
+	public void setSessions(List<Session> sessions) {
+		this.sessions = sessions;
 	}
    
 }
