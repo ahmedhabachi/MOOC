@@ -1,4 +1,4 @@
-package entities;
+package edu.esprit.mooc.persistance;
 
 import java.io.Serializable;
 import java.lang.Integer;
@@ -6,12 +6,12 @@ import java.lang.String;
 import javax.persistence.*;
 
 /**
- * Entity implementation class for Entity: Discussion
+ * Entity implementation class for Entity: Comment
  *
  */
 @Entity
 
-public class Discussion implements Serializable {
+public class Comment implements Serializable {
 
 	   
 	@Id
@@ -20,7 +20,7 @@ public class Discussion implements Serializable {
 	private String message;
 	private static final long serialVersionUID = 1L;
 
-	public Discussion() {
+	public Comment() {
 		super();
 	}   
 	public Integer getId() {

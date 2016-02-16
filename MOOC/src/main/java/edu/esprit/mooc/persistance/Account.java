@@ -1,4 +1,4 @@
-package entities;
+package edu.esprit.mooc.persistance;
 
 import java.io.Serializable;
 import java.lang.Boolean;

@@ -1,26 +1,25 @@
-package entities;
+package edu.esprit.mooc.persistance;
 
 import java.io.Serializable;
 import java.lang.Integer;
-import java.lang.String;
 import javax.persistence.*;
 
 /**
- * Entity implementation class for Entity: Comment
+ * Entity implementation class for Entity: Rating
  *
  */
 @Entity
 
-public class Comment implements Serializable {
+public class Rating implements Serializable {
 
 	   
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	private String message;
+	private Integer note;
 	private static final long serialVersionUID = 1L;
 
-	public Comment() {
+	public Rating() {
 		super();
 	}   
 	public Integer getId() {
@@ -30,12 +29,12 @@ public class Comment implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}   
-	public String getMessage() {
-		return this.message;
+	public Integer getNote() {
+		return this.note;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public void setNote(Integer note) {
+		this.note = note;
 	}
    
 }

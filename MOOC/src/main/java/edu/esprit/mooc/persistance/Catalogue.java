@@ -1,27 +1,30 @@
-package entities;
+package edu.esprit.mooc.persistance;
 
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
- * Entity implementation class for Entity: Categorie
+ * Entity implementation class for Entity: Catalogue
  *
  */
 @Entity
 
-public class Categorie implements Serializable {
+public class Catalogue implements Serializable {
 
-	   
+	
 	private Integer id;
 	private String name;
 	private String picture;
-	Catalogue catalogue ;
+	private List<Categorie>categories;
 	private static final long serialVersionUID = 1L;
-	public Categorie() {
+
+	public Catalogue() {
 		super();
-	}   
+	}  
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public Integer getId() {
@@ -45,12 +48,12 @@ public class Categorie implements Serializable {
 	public void setPicture(String picture) {
 		this.picture = picture;
 	}
-	@ManyToOne
-	public Catalogue getCatalogue() {
-		return catalogue;
+	@OneToMany(mappedBy="catalogue")
+	public List<Categorie> getCategories() {
+		return categories;
 	}
-	public void setCatalogue(Catalogue catalogue) {
-		this.catalogue = catalogue;
+	public void setCategories(List<Categorie> categories) {
+		this.categories = categories;
 	}
    
 }

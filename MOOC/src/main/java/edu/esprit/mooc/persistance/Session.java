@@ -1,10 +1,12 @@
-package entities;
+package edu.esprit.mooc.persistance;
 
 import java.io.Serializable;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -34,6 +36,7 @@ public class Session implements Serializable {
 	private String videos;
 	private String name;
 	private LearningMaterial material;
+	private List<Categorie> categories ;
 	private static final long serialVersionUID = 1L;
 	public Session() {
 		super();
@@ -114,6 +117,13 @@ public class Session implements Serializable {
 	}
 	public void setMaterial(LearningMaterial material) {
 		this.material = material;
+	}
+	
+	public List<Categorie> getCategories() {
+		return categories;
+	}
+	public void setCategories(List<Categorie> categories) {
+		this.categories = categories;
 	}
 
    
